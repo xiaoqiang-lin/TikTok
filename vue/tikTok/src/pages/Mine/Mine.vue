@@ -4,7 +4,7 @@
     <header class="mine_header">
       <div class="bg">
         <img
-          src="http://127.0.0.1:3000/images/bgmCovers/TIM20190807103957.jpg"
+          src="http://47.94.148.11:3000/images/bgmCovers/TIM20190807103957.jpg"
           alt="bg"
           width="100%"
           height="180px"

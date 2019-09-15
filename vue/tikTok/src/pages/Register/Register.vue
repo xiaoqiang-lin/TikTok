@@ -23,7 +23,7 @@
            <img
               ref="captcha"
               class="captcha"
-              src="http://127.0.0.1:3000/captcha"
+              src="http://47.94.148.11:3000/captcha"
               alt="captcha"
               @click="getCaptcha()"
             >
@@ -71,7 +71,7 @@ export default {
       this.$router.back()
     },
     getCaptcha(){
-      this.$refs.captcha.src = 'http://127.0.0.1:3000/captcha?time=' + new Date();
+      this.$refs.captcha.src = 'http://47.94.148.11:3000/captcha?time=' + new Date();
     },
     async register(){
       if(!this.username){
