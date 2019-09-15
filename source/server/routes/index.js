@@ -51,8 +51,8 @@ router.post('/uploadVideo', async (ctx, next) => {
   let sqlStr = `SELECT path FROM bgm WHERE id ='${bgm_id}'`
   let res = await query(sqlStr)
   console.log(res[0].path)
-  const audio_path = path.resolve(res[0].path.replace(/http:\/\/127\.0\.0\.1:3000/g,'./public'))
-  // const audio_path = path.resolve(res[0].path.replace(/\.\/public/g,'http://127.0.0.1'))
+  const audio_path = path.resolve(res[0].path.replace(/http:\/\/47\.94\.148\.11:3000/g,'./public'))
+
   if(!res.length){
       ctx.body = {
         err_code: 0,
@@ -81,8 +81,8 @@ router.post('/uploadVideo', async (ctx, next) => {
           spawn(`ffmpeg.exe -ss 00:00:01 -y -i ${video_path} -vframes 1 ${video_cover_path}`,{cwd: 'D:\\Applications\\ffmpeg\\bin',shell:true})
           sqlStr = `INSERT INTO videos(id,user_id,audio_id,video_desc,video_path,video_seconds,video_width,video_height,cover_path)
            values(?,?,?,?,?,?,?,?,?)`
-           new_video_path = new_video_path.replace(/E:\\TikTok\\server\\public\\/g,'http://127.0.0.1:3000/')
-           video_cover_path = video_cover_path.replace(/E:\\TikTok\\server\\public\\/g,'http://127.0.0.1:3000/')
+           new_video_path = new_video_path.replace(/E:\\TikTok\\server\\public\\/g,'http://47.94.148.11:3000/')
+           video_cover_path = video_cover_path.replace(/E:\\TikTok\\server\\public\\/g,'http://47.94.148.11:3000/')
           query(sqlStr,[id,user_id,bgm_id,desc,new_video_path,duration,width,height,video_cover_path])
         })
       }

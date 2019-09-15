@@ -26,7 +26,7 @@ app.use(cors({
   allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
 }))
 
-
+app.use(require('koa-static')(__dirname + '/public/dist'))
 // middlewares
 
 app.use(koaBody({
