@@ -27,7 +27,7 @@
     "mysql": "^2.17.1",
     "node-uuid": "^1.4.8",
     "nodemailer": "^6.3.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "qcloudsms_js": "^0.1.1",
     "svg-captcha": "^1.4.0"
   },
